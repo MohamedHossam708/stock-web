@@ -1,6 +1,6 @@
 "use client"
 
-import { Nav_Items } from '@/lib/Contans'
+import { NAV_ITEMS } from '@/lib/Contans'
 import Link from 'next/link'
 import { usePathname } from 'next/navigation'
 import React from 'react'
@@ -17,11 +17,11 @@ const Navitems = () => {
 
   return (
    <ul className='flex flex-col sm:flex-row gap-3  sm:gap-10 font-medium '>
-    {Nav_Items.map(({title , href})=>(
+    {NAV_ITEMS.map(({label , href})=>(
         <li key={href}>
             <Link href={href} className={`hover:text-yellow-500 transition-colors 
                 ${isActive(href)?'text-gray-100':''}`}>
-            {title}
+            {label}
             </Link>
         </li>
     ))}
